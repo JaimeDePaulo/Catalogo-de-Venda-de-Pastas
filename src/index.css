@@ -5,15 +5,29 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", serif;
   
-  --color-primary: #5D4037; /* Brown */
-  --color-secondary: #F7F3ED; /* Beige */
-  --color-accent-green: #2D4030; /* Green */
-  --color-accent-orange: #C05A2B; /* Orange */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent-green: var(--accent-green);
+  --color-accent-orange: var(--accent-orange);
+}
+
+:root {
+  --primary: #5D4037;
+  --secondary: #F7F3ED;
+  --accent-green: #2D4030;
+  --accent-orange: #C05A2B;
+}
+
+[data-theme='dark'] {
+  --primary: #F7F3ED;
+  --secondary: #1A0F0B;
+  --accent-green: #4A634E;
+  --accent-orange: #E67E4D;
 }
 
 @layer base {
   body {
-    @apply bg-secondary text-primary font-sans;
+    @apply bg-secondary text-primary font-sans transition-colors duration-300;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -22,9 +36,9 @@
 }
 
 .african-pattern {
-  background-image: radial-gradient(var(--color-primary) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.1;
+  background-image: radial-gradient(var(--color-accent-orange) 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+  opacity: 0.05;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

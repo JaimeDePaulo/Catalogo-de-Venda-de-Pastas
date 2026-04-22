@@ -28,11 +28,11 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-sm shadow-2xl flex flex-col md:flex-row"
+            className="relative bg-secondary w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-sm shadow-2xl flex flex-col md:flex-row border border-primary/10"
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 p-2 bg-white/80 hover:bg-white rounded-full text-primary transition-colors"
+              className="absolute top-4 right-4 z-10 p-2 bg-secondary/80 hover:bg-secondary rounded-full text-primary transition-colors border border-primary/10"
             >
               <X size={24} />
             </button>

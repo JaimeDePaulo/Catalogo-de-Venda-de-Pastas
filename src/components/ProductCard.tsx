@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, onViewDetails }: ProductCardProps) {
   return (
-    <div className="group bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all border border-primary/5">
+    <div className="group bg-secondary/30 backdrop-blur-sm rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all border border-primary/10">
       <div 
         className="aspect-[4/5] overflow-hidden cursor-pointer relative"
         onClick={() => onViewDetails(product)}
@@ -19,13 +19,13 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
           className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors" />
-        <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors" />
+        <div className="absolute bottom-4 left-4 bg-secondary/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
           <p className="text-xs font-bold text-primary uppercase tracking-tighter">Espiar</p>
         </div>
       </div>
       
-      <div className="p-4 bg-white">
+      <div className="p-4">
         <div className="flex flex-col mb-4">
           <h3 className="text-xl font-serif text-primary leading-tight mb-1">{product.name}</h3>
           <p className="text-xs text-primary/60 font-sans tracking-wide">{product.category} artesanal</p>

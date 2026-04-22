@@ -16,15 +16,23 @@ export default function Catalog() {
   }, [activeCategory]);
 
   return (
-    <section id="catalogo" className="py-24 bg-white">
+    <section id="catalogo" className="py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">Nossa Coleção</h2>
-          <div className="h-1 w-20 bg-accent-orange mx-auto mb-6" />
-          <p className="text-primary/60 max-w-xl mx-auto italic">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="text-[10px] uppercase tracking-[0.4em] text-accent-orange font-bold mb-4 block">
+            Seleção Exclusiva
+          </span>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6 tracking-tighter">Nossa Coleção</h2>
+          <div className="h-0.5 w-12 bg-accent-orange mx-auto mb-8" />
+          <p className="text-primary/60 max-w-xl mx-auto italic transition-colors leading-relaxed">
             "Curadoria artesanal pensada para mulheres que não abrem mão da elegância e da personalidade."
           </p>
-        </div>
+        </motion.div>
 
         {/* Filter */}
         <div className="flex flex-wrap justify-center mb-12 gap-8 text-xs uppercase tracking-widest font-bold">

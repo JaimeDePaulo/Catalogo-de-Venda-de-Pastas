@@ -7,6 +7,7 @@ import { motion, useScroll, useSpring } from 'motion/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Catalog from './components/Catalog';
+import Features from './components/Features';
 import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
 import WhatsAppFAB from './components/WhatsAppFAB';
@@ -32,6 +33,7 @@ export default function App() {
       <main>
         <Hero />
         <Catalog />
+        <Features />
         <AboutSection />
       </main>
       
