@@ -45,14 +45,6 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
-              <a 
-                href={`https://drive.google.com/file/d/${product.image.match(/id=([^&]+)/)?.[1] || product.image.match(/id\/([^/]+)/)?.[1] || product.image.split('id=')[1]?.split('&')[0]}/view`}
-                target="_blank"
-                rel="noreferrer"
-                className="absolute bottom-4 right-4 bg-black/50 text-white text-[10px] px-3 py-1.5 rounded-full hover:bg-black/70 transition-colors backdrop-blur-sm border border-white/20"
-              >
-                Ver no Google Drive
-              </a>
             </div>
 
             <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-secondary/30">
@@ -60,7 +52,7 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                 {product.category}
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">{product.name}</h2>
-              <p className="text-2xl font-bold text-primary mb-6">{product.price.toLocaleString('pt-AO')} Kzs</p>
+              <p className="text-2xl font-bold text-primary mb-6">{product.price.toLocaleString('pt-AO')} AOA</p>
               
               <div className="h-px w-full bg-primary/10 mb-6" />
               
