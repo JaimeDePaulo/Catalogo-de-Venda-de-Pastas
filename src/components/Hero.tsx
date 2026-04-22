@@ -52,7 +52,7 @@ export default function Hero() {
           className="relative w-full h-full max-h-[700px] aspect-[4/5]"
         >
           <ImgWithFallback
-            src="https://lh3.googleusercontent.com/d/1SFHm7pXbXDMfkODZmCwDgkOTtvsaklbJ=s1600"
+            src="https://drive.google.com/thumbnail?id=1SFHm7pXbXDMfkODZmCwDgkOTtvsaklbJ&sz=w1200"
             alt="Moça elegante com bolsa Mona D'Ami"
             className="w-full h-full object-cover shadow-2xl"
           />

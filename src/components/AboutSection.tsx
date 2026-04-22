@@ -13,7 +13,7 @@ export default function AboutSection() {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-square relative overflow-hidden rounded-full border-8 border-white shadow-xl">
               <ImgWithFallback
-                src="https://lh3.googleusercontent.com/d/1YhpZsiMvHn8jQUhv5FneNGtDCF_aKhPk=s1200"
+                src="https://drive.google.com/thumbnail?id=1YhpZsiMvHn8jQUhv5FneNGtDCF_aKhPk&sz=w1200"
                 alt="Retrato da essência Mona D'Ami"
                 className="w-full h-full object-cover"
               />
