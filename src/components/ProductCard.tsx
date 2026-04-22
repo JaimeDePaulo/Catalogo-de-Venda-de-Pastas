@@ -1,3 +1,4 @@
+import ImgWithFallback from './ImgWithFallback';
 import { WhatsAppLink } from '../utils/whatsapp';
 import { Product } from '../constants';
 
@@ -13,11 +14,10 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
         className="aspect-[4/5] overflow-hidden cursor-pointer relative"
         onClick={() => onViewDetails(product)}
       >
-        <img
+        <ImgWithFallback
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors" />
         <div className="absolute bottom-4 left-4 bg-secondary/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
@@ -32,7 +32,7 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
         </div>
         
         <div className="flex justify-between items-center">
-          <span className="font-bold text-lg text-primary">{product.price.toLocaleString('pt-AO')} Kzs</span>
+          <span className="font-bold text-lg text-primary">{product.price.toLocaleString('pt-AO')} AOA</span>
           <a
             href={WhatsAppLink(product.name)}
             target="_blank"

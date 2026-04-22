@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { BRAND_INFO } from '../constants';
+import ImgWithFallback from './ImgWithFallback';
 
 export default function Hero() {
   return (
@@ -50,11 +51,10 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="relative w-full h-full max-h-[700px] aspect-[4/5]"
         >
-          <img
-            src="https://lh3.googleusercontent.com/u/0/d/1SFHm7pXbXDMfkODZmCwDgkOTtvsaklbJ"
+          <ImgWithFallback
+            src="https://lh3.googleusercontent.com/d/1SFHm7pXbXDMfkODZmCwDgkOTtvsaklbJ=s1600"
             alt="Moça elegante com bolsa Mona D'Ami"
             className="w-full h-full object-cover shadow-2xl"
-            referrerPolicy="no-referrer"
           />
           
           {/* Subtle pattern overlay or element if needed */}

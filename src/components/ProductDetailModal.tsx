@@ -3,6 +3,8 @@ import { X, MessageCircle as WhatsApp } from 'lucide-react';
 import { Product } from '../constants';
 import { WhatsAppLink } from '../utils/whatsapp';
 
+import ImgWithFallback from './ImgWithFallback';
+
 interface ProductDetailModalProps {
   product: Product | null;
   isOpen: boolean;
@@ -38,12 +40,19 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
             </button>
 
             <div className="w-full md:w-1/2 h-[40vh] md:h-auto relative">
-              <img
+              <ImgWithFallback
                 src={product.image}
                 alt={product.name}
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
+              <a 
+                href={`https://drive.google.com/file/d/${product.image.match(/id=([^&]+)/)?.[1] || product.image.match(/id\/([^/]+)/)?.[1] || product.image.split('id=')[1]?.split('&')[0]}/view`}
+                target="_blank"
+                rel="noreferrer"
+                className="absolute bottom-4 right-4 bg-black/50 text-white text-[10px] px-3 py-1.5 rounded-full hover:bg-black/70 transition-colors backdrop-blur-sm border border-white/20"
+              >
+                Ver no Google Drive
+              </a>
             </div>
 
             <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-secondary/30">

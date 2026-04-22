@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { BRAND_INFO } from '../constants';
+import ImgWithFallback from './ImgWithFallback';
 
 export default function AboutSection() {
   return (
@@ -11,11 +12,10 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="aspect-square relative overflow-hidden rounded-full border-8 border-white shadow-xl">
-              <img
-                src="https://lh3.googleusercontent.com/u/0/d/1YhpZsiMvHn8jQUhv5FneNGtDCF_aKhPk"
+              <ImgWithFallback
+                src="https://lh3.googleusercontent.com/d/1YhpZsiMvHn8jQUhv5FneNGtDCF_aKhPk=s1200"
                 alt="Retrato da essência Mona D'Ami"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -top-4 -right-4 w-32 h-32 bg-accent-orange text-white flex items-center justify-center rounded-sm rotate-12 shadow-lg p-4 text-center">
